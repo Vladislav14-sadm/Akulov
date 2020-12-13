@@ -9,8 +9,12 @@ class MyLog extends LogAbstract implements LogInterface
 {
     public function _write()
     {
-        foreach ($this->log as $v)
+        $b = date('d-m-Y\_H.i.s.u');
+
+        foreach ($this->log as $v) {
             echo $v . "\r\n";
+            file_put_contents(__DIR__ . "\..\log\\$b.log", trim($v."\r\n") . PHP_EOL, FILE_APPEND);
+        }
     }
 
     public static function log($str)

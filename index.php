@@ -15,6 +15,7 @@ require_once 'Akulov/MyLog.php';
 require_once 'Akulov/AkulovException.php';
 
 try {
+    M::log("Версия программы: " . trim(file_get_contents('version')) );
     echo "Enter 3 numbers\n\r";
 
     $a = (int)readline();
