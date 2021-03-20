@@ -1,4 +1,6 @@
 core
-.idea
 log
 version
+.idea
+composer.phar
+vendor
